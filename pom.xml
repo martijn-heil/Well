@@ -22,12 +22,6 @@
             <artifactId>kotlin-stdlib</artifactId>
             <version>${kotlin.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>tk.martijn_heil.playerclasslevels</groupId>
-            <artifactId>ModPlayerClassLevelsK</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
     <build>
