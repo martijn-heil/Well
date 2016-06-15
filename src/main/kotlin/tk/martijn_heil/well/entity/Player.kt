@@ -24,6 +24,6 @@
 
 package tk.martijn_heil.well.entity
 
-interface Player : OfflinePlayer {
-    val name: String
+interface Player : User {
+
 }

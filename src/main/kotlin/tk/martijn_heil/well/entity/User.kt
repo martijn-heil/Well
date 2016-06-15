@@ -22,11 +22,17 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
+package tk.martijn_heil.well.entity
 
-import tk.martijn_heil.well.entity.Player
+import tk.martijn_heil.well.Identifiable
 
+/**
+ * A User is the data usually associated with a Player that is persisted across server restarts.
+ * This is in contrast to Player which represents the ingame entity associated with an online User.
+ */
+interface User : Identifiable {
+    val name: String
+    val isOnline: Boolean
 
-interface HasPlayer {
     val player: Player
 }

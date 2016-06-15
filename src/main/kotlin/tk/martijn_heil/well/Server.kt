@@ -24,8 +24,8 @@
 
 package tk.martijn_heil.well
 
-import tk.martijn_heil.well.entity.OfflinePlayer
 import tk.martijn_heil.well.entity.Player
+import tk.martijn_heil.well.entity.User
 import java.util.*
 import java.util.logging.Logger
 
@@ -77,7 +77,7 @@ interface Server {
     /**
      * Whether this server has a whitelist.
      */
-    var hasWhitelist: Boolean
+    var isWhitelisted: Boolean
 
     /**
      * The default GameMode on this server.
@@ -104,6 +104,6 @@ interface Server {
     fun getPlayer(uuid: UUID): Player
 
     @Deprecated("Persistent storage of users should be by UUID as names are no longer unique past a single session.")
-    fun getOfflinePlayer(name: String): OfflinePlayer
-    fun getOfflinePlayer(uuid: UUID): OfflinePlayer
+    fun getOfflinePlayer(name: String): User
+    fun getOfflinePlayer(uuid: UUID): User
 }
