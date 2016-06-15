@@ -24,7 +24,6 @@
 
 package tk.martijn_heil.well.entity
 
-interface Player : OfflinePlayer, Comparable<Player> {
+interface Player : OfflinePlayer {
     val name: String
-
 }

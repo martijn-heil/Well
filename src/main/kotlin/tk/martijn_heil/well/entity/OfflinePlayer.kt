@@ -24,7 +24,9 @@
 
 package tk.martijn_heil.well.entity
 
+import tk.martijn_heil.well.Identifiable
 
-interface OfflinePlayer {
+
+interface OfflinePlayer : Identifiable {
 
 }

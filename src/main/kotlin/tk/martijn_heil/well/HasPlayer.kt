@@ -22,28 +22,11 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.plugin
+package tk.martijn_heil.well
 
-import tk.martijn_heil.well.event.Event
-import java.io.File
-
-
-interface PluginManager {
-    val loadedPlugins: Collection<Plugin>
-    val pluginDirectory: File
+import tk.martijn_heil.well.entity.Player
 
 
-    fun enableAll()
-    fun disableAll()
-    fun reloadAll()
-    fun unloadAll()
-
-    fun enable(plugin: Plugin)
-    fun disable(plugin: Plugin)
-    fun reload(plugin: Plugin)
-
-    fun load(name: String)
-    fun unload(plugin: Plugin)
-
-    fun callEvent(event: Event)
+interface HasPlayer {
+    val player: Player
 }

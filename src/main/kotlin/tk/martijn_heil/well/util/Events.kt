@@ -22,28 +22,13 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.plugin
+package tk.martijn_heil.well.util
 
-import tk.martijn_heil.well.event.Event
-import java.io.File
-
-
-interface PluginManager {
-    val loadedPlugins: Collection<Plugin>
-    val pluginDirectory: File
+import tk.martijn_heil.well.Well
+import tk.martijn_heil.well.event.CancellableEvent
 
 
-    fun enableAll()
-    fun disableAll()
-    fun reloadAll()
-    fun unloadAll()
-
-    fun enable(plugin: Plugin)
-    fun disable(plugin: Plugin)
-    fun reload(plugin: Plugin)
-
-    fun load(name: String)
-    fun unload(plugin: Plugin)
-
-    fun callEvent(event: Event)
+fun attemptEvent(event: CancellableEvent): Boolean {
+    Well.callEvent(event);
+    return event.cancelled;
 }

@@ -30,6 +30,6 @@ import tk.martijn_heil.well.messaging.MessageRecipient
 /**
  * Represents something which can send commands and receive messages.
  */
-interface CommandSender : MessageRecipient {
+interface CommandSource : MessageRecipient, Comparable<CommandSource> {
     fun execute(command: String)
 }

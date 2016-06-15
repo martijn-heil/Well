@@ -22,28 +22,9 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.plugin
-
-import tk.martijn_heil.well.event.Event
-import java.io.File
+package tk.martijn_heil.well.inventory
 
 
-interface PluginManager {
-    val loadedPlugins: Collection<Plugin>
-    val pluginDirectory: File
-
-
-    fun enableAll()
-    fun disableAll()
-    fun reloadAll()
-    fun unloadAll()
-
-    fun enable(plugin: Plugin)
-    fun disable(plugin: Plugin)
-    fun reload(plugin: Plugin)
-
-    fun load(name: String)
-    fun unload(plugin: Plugin)
-
-    fun callEvent(event: Event)
+interface HasInventory {
+    val inventory: Inventory
 }
