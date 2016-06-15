@@ -22,20 +22,11 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
+package tk.martijn_heil.well.localization
 
-import tk.martijn_heil.well.event.Event
-import tk.martijn_heil.well.plugin.PluginManager
-import java.io.File
+import java.util.*
 
-/**
- * Represents an implementation of the Well API.
- */
-interface WellImplementation {
-    val server: Server
-    val pluginManagers: Collection<PluginManager>
-    val wellRootDirectory: File
 
-    fun registerPluginManager(manager: PluginManager)
-    fun callEvent(event: Event)
+interface LocalizedString {
+    fun get(inLocale: Locale): String
 }

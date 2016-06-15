@@ -24,19 +24,31 @@
 
 package tk.martijn_heil.well
 
+import tk.martijn_heil.well.event.Event
+import tk.martijn_heil.well.plugin.PluginManager
+import java.io.File
+
 class Well {
     companion object : WellImplementation {
+        override fun callEvent(event: Event) = implementation.callEvent(event)
+
+        override fun registerPluginManager(manager: PluginManager) = implementation.registerPluginManager(manager)
+
+
+        override val wellRootDirectory: File
+            get() = implementation.wellRootDirectory
+
+
+        override val pluginManagers: Collection<PluginManager>
+            get() = implementation.pluginManagers
+
 
         override val server: Server
             get() = implementation.server
 
 
-
-
-
         var implementation: WellImplementation
             get() = implementation
-            set(value: WellImplementation) {
-                implementation = value}
+            set(value: WellImplementation) { implementation = value }
     }
 }

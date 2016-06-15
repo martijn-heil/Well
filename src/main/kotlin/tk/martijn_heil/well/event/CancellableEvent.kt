@@ -22,20 +22,11 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
+package tk.martijn_heil.well.event
 
-import tk.martijn_heil.well.event.Event
-import tk.martijn_heil.well.plugin.PluginManager
-import java.io.File
 
-/**
- * Represents an implementation of the Well API.
- */
-interface WellImplementation {
-    val server: Server
-    val pluginManagers: Collection<PluginManager>
-    val wellRootDirectory: File
+interface CancellableEvent : Event {
+    val cancelled: Boolean
 
-    fun registerPluginManager(manager: PluginManager)
-    fun callEvent(event: Event)
+    fun cancel()
 }

@@ -24,9 +24,12 @@
 
 package tk.martijn_heil.well.plugin
 
+import java.io.File
+
 
 interface PluginManager {
-    val loadedPlugins: List<Plugin>
+    val loadedPlugins: Collection<Plugin>
+    val pluginDirectory: File
 
 
     fun enableAll()
