@@ -71,7 +71,6 @@ interface Server {
     val ipBans: List<String>
 
 
-
     var idleTimeOut: Int
 
     /**

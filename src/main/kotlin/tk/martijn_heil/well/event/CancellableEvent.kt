@@ -26,7 +26,10 @@ package tk.martijn_heil.well.event
 
 
 interface CancellableEvent : Event {
-    val cancelled: Boolean
+    var isCancelled: Boolean
 
-    fun cancel()
+    fun attempt(): Boolean {
+        this.call()
+        return this.isCancelled;
+    }
 }

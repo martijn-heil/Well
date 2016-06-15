@@ -22,11 +22,12 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.event
+package tk.martijn_heil.well.event.block
 
-import tk.martijn_heil.well.Well
+import tk.martijn_heil.well.entity.Player
+import tk.martijn_heil.well.event.CancellableEvent
 
 
-interface  Event {
-    fun call() = Well.callEvent(this)
+interface BlockBreakEvent : BlockEvent, CancellableEvent {
+    val player: Player;
 }

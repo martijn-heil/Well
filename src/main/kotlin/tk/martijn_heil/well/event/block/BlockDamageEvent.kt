@@ -22,11 +22,9 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.event
-
-import tk.martijn_heil.well.Well
+package tk.martijn_heil.well.event.block
 
 
-interface  Event {
-    fun call() = Well.callEvent(this)
+interface BlockDamageEvent {
+
 }

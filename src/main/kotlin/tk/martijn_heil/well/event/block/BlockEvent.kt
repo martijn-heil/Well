@@ -27,5 +27,6 @@ package tk.martijn_heil.well.event.block
 import tk.martijn_heil.well.block.Block
 
 
-class BlockEvent(block: Block) {
+interface BlockEvent {
+    val block: Block
 }

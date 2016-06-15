@@ -30,5 +30,5 @@ import tk.martijn_heil.well.event.CancellableEvent
 
 fun attemptEvent(event: CancellableEvent): Boolean {
     Well.callEvent(event);
-    return event.cancelled;
+    return event.isCancelled;
 }
