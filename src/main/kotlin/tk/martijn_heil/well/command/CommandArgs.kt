@@ -22,13 +22,13 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
+package tk.martijn_heil.well.command
 
 import java.util.*
 
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
+class CommandArgs : Stack<String>() {
+    init {
 
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
+    }
 }

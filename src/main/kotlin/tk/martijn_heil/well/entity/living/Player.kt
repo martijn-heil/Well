@@ -22,13 +22,15 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
+package tk.martijn_heil.well.entity.living
 
-import java.util.*
+import tk.martijn_heil.well.OfflinePlayer
+import tk.martijn_heil.well.command.CommandSource
+import tk.martijn_heil.well.messaging.MessageRecipient
 
+/**
+ * Represents an online player.
+ */
+interface Player : OfflinePlayer, MessageRecipient, CommandSource {
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
-
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
 }

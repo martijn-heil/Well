@@ -22,13 +22,13 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
+package tk.martijn_heil.well.command.parametric
 
-import java.util.*
+import tk.martijn_heil.well.command.CommandArgs
 
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
+interface ArgumentProvider<T> {
+    val suggestions: List<String>
 
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
+    fun provide(args: CommandArgs, modifiers: List<Annotation>): T
 }

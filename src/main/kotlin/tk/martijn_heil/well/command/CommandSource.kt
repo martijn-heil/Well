@@ -24,12 +24,10 @@
 
 package tk.martijn_heil.well.command
 
-import tk.martijn_heil.well.messaging.MessageRecipient
-
 
 /**
  * Represents something which can send commands and receive messages.
  */
-interface CommandSource : MessageRecipient, Comparable<CommandSource> {
+interface CommandSource {
     fun execute(command: String)
 }

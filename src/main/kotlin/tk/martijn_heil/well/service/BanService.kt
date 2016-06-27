@@ -22,13 +22,12 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
+package tk.martijn_heil.well.service
 
-import java.util.*
+import tk.martijn_heil.well.GameProfile
 
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
-
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
+interface BanService {
+    fun isBanned(profile: GameProfile): Boolean
+    fun setBanned(profile: GameProfile): Boolean
 }

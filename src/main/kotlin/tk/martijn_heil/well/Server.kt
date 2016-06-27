@@ -24,8 +24,7 @@
 
 package tk.martijn_heil.well
 
-import tk.martijn_heil.well.entity.Player
-import tk.martijn_heil.well.entity.User
+import tk.martijn_heil.well.entity.living.Player
 import java.util.*
 import java.util.logging.Logger
 
@@ -95,14 +94,14 @@ interface Server {
     fun reload(announce: Boolean)
 
 
-    fun getWorld(name: String): World
-    fun getWorld(uuid: UUID): World
+    fun getWorld(name: String): World?
+    fun getWorld(uuid: UUID): World?
 
     @Deprecated("Persistent storage of users should be by UUID as names are no longer unique past a single session.")
-    fun getPlayer(name: String): Player
-    fun getPlayer(uuid: UUID): Player
+    fun getPlayer(name: String): Player?
+    fun getPlayer(uuid: UUID): Player?
 
     @Deprecated("Persistent storage of users should be by UUID as names are no longer unique past a single session.")
-    fun getOfflinePlayer(name: String): User
-    fun getOfflinePlayer(uuid: UUID): User
+    fun getOfflinePlayer(name: String): OfflinePlayer?
+    fun getOfflinePlayer(uuid: UUID): OfflinePlayer?
 }

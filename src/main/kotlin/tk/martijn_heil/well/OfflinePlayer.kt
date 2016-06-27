@@ -24,11 +24,20 @@
 
 package tk.martijn_heil.well
 
-import java.util.*
+import tk.martijn_heil.well.inventory.HasInventory
 
+/**
+ * Represents a player who has played before on the server, but might not currently be online.
+ */
+interface OfflinePlayer : GameProfile, HasPlayer, HasInventory, HasLocation {
+    /**
+     * Date of first log-in for this player, or 0
+     */
+    val firstPlayed: Long
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
-
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
+    /**
+     * Date of last log-in for this player, or 0
+     */
+    val lastPlayed: Long
+    val isOnline: Boolean
 }

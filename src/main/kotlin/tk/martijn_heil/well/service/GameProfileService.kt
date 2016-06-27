@@ -22,13 +22,12 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
+package tk.martijn_heil.well.service
 
+import tk.martijn_heil.well.GameProfile
 import java.util.*
 
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
-
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
+interface GameProfileService {
+    fun getGameProfile(uuid: UUID): GameProfile
 }

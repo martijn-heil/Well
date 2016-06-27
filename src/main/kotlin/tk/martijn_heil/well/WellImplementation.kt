@@ -26,15 +26,21 @@ package tk.martijn_heil.well
 
 import tk.martijn_heil.well.event.Event
 import tk.martijn_heil.well.plugin.PluginManager
+import tk.martijn_heil.well.service.ServiceManager
 import java.io.File
 
 /**
  * Represents an implementation of the Well API.
  */
 interface WellImplementation {
+    val meta: WellImplementationMeta
+
+
     val server: Server
     val pluginManagers: Collection<PluginManager>
     val wellRootDirectory: File
+    val serviceManager: ServiceManager
+
 
     fun registerPluginManager(manager: PluginManager)
     fun callEvent(event: Event)

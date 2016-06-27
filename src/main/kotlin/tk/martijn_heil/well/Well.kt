@@ -26,10 +26,14 @@ package tk.martijn_heil.well
 
 import tk.martijn_heil.well.event.Event
 import tk.martijn_heil.well.plugin.PluginManager
+import tk.martijn_heil.well.service.ServiceManager
 import java.io.File
 
 class Well {
     companion object : WellImplementation {
+        override val serviceManager: ServiceManager
+            get() = implementation.serviceManager
+
         override fun callEvent(event: Event) = implementation.callEvent(event)
 
         override fun registerPluginManager(manager: PluginManager) = implementation.registerPluginManager(manager)

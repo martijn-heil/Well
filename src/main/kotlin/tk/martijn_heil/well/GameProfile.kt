@@ -22,17 +22,30 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.entity
+package tk.martijn_heil.well
 
-import tk.martijn_heil.well.Identifiable
+import tk.martijn_heil.well.service.GameProfileService
+import java.util.*
 
-/**
- * A User is the data usually associated with a Player that is persisted across server restarts.
- * This is in contrast to Player which represents the ingame entity associated with an online User.
- */
-interface User : Identifiable {
-    val name: String
-    val isOnline: Boolean
 
-    val player: Player
+interface GameProfile : Identifiable {
+    /**
+     * Note that Minecraft's usernames should NOT be used for storage,
+     * because player's can change their username!
+     * Use UUID's for storage instead.
+     */
+    val username: String
+
+    /**
+     * Has this player ever before played on this server?
+     */
+    val isKnown: Boolean
+
+    var isWhitelisted: Boolean
+    var isBanned: Boolean
+
+
+    companion object {
+        fun of(uuid: UUID): GameProfile? = Well.serviceManager.provideFor(GameProfileService::class)?.getGameProfile(uuid);
+    }
 }

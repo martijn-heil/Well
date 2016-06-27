@@ -22,8 +22,11 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.entity
+package tk.martijn_heil.well.command.command
 
-interface Player : User {
+import tk.martijn_heil.well.localization.LocalizedString
 
+
+interface Command {
+    val description: LocalizedString
 }

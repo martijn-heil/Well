@@ -22,13 +22,10 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
+package tk.martijn_heil.well.command.annotation
 
-import java.util.*
+import kotlin.reflect.KClass
 
-
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
-
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
-}
+@Target(AnnotationTarget.VALUE_PARAMETER)
+@Retention(AnnotationRetention.RUNTIME)
+annotation class Switch(val short: String, val long: String, val idk: KClass<*>)

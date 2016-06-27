@@ -22,13 +22,15 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
+package tk.martijn_heil.well.command.annotation
 
-import java.util.*
+import kotlin.reflect.KClass
 
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
-
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
-}
+@Target(AnnotationTarget.FUNCTION)
+@Retention(AnnotationRetention.RUNTIME)
+annotation  class Cmd(
+        val classForClassLoader: KClass<*>,
+        val resourceBundleBaseName: String,
+        val messageKey: String
+)

@@ -24,7 +24,7 @@
 
 package tk.martijn_heil.well.event.block
 
-import tk.martijn_heil.well.entity.Player
+import tk.martijn_heil.well.entity.living.Player
 import tk.martijn_heil.well.event.CancellableEvent
 
 

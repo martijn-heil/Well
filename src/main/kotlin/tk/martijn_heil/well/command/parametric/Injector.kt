@@ -22,13 +22,9 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
-
-import java.util.*
+package tk.martijn_heil.well.command.parametric
 
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
-
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
+interface Injector {
+    fun install(provider: ArgumentProvider<*>)
 }

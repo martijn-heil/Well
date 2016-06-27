@@ -24,11 +24,7 @@
 
 package tk.martijn_heil.well
 
-import java.util.*
 
-
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
-
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
+interface HasLocation {
+    val location: Location
 }

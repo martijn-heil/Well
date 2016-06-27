@@ -22,13 +22,9 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
-
-import java.util.*
+package tk.martijn_heil.well.command
 
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
+class SimpleCommandDispatcher : CommandDispatcher {
 
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
 }

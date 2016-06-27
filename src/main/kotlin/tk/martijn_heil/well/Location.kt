@@ -24,11 +24,11 @@
 
 package tk.martijn_heil.well
 
-import java.util.*
 
+interface Location : Comparable<Location> {
+    val x: Int;
+    val y: Int
+    val z: Int;
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
-
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
+    override fun compareTo(other: Location): Int = if ((x == other.x) && (y == other.y) && (z == other.z)) 1 else 0;
 }

@@ -24,11 +24,9 @@
 
 package tk.martijn_heil.well
 
-import java.util.*
+import tk.martijn_heil.well.entity.living.Player
 
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
-
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
+interface HasPlayer {
+    val player: Player
 }

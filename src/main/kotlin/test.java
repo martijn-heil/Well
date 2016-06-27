@@ -22,13 +22,37 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
+import org.jetbrains.annotations.NotNull;
+import tk.martijn_heil.well.GameProfile;
+import tk.martijn_heil.well.Identifiable;
 
-import java.util.*
+import java.util.UUID;
 
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
+public class test implements GameProfile
+{
+    @NotNull
+    public String getUsername()
+    {
+        return null;
+    }
 
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
+
+    public boolean isKnown()
+    {
+        return false;
+    }
+
+
+    @NotNull
+    public UUID getUniqueId()
+    {
+        return null;
+    }
+
+
+    public int compareTo(@NotNull Identifiable other)
+    {
+        return 0;
+    }
 }

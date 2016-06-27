@@ -24,11 +24,10 @@
 
 package tk.martijn_heil.well
 
-import java.util.*
 
-
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
-
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
+interface WellImplementationMeta {
+    val wellVersion: String
+    val version: String
+    val name: String
+    val description: String?
 }

@@ -22,13 +22,10 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
-
-import java.util.*
+package tk.martijn_heil.well.command
 
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
-
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
+abstract class CommandElement {
+    abstract fun complete(): List<String>
+    abstract fun parse(source: CommandSource, args: CommandArgs)
 }

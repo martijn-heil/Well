@@ -22,13 +22,16 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
+package tk.martijn_heil.well.service
 
-import java.util.*
+import kotlin.reflect.KClass
 
 
-interface Identifiable : Comparable<Identifiable> {
-    val uniqueId: UUID
+interface ServiceManager {
 
-    override fun compareTo(other: Identifiable): Int = uniqueId.compareTo(other.uniqueId);
+    /**
+     * The service or null if none was found.
+     */
+    fun <T : Any>provideFor(service: KClass<T>): T?
+    fun <T : Any>setProvider(service: KClass<T>, test: T)
 }
