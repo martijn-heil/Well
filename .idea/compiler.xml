@@ -22,11 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="Well" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Well" target="1.5" />
+      <module name="Well_main" target="1.8" />
+      <module name="Well_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

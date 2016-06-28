@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Well.iml" filepath="$PROJECT_DIR$/Well.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Well.iml" filepath="$PROJECT_DIR$/.idea/modules/Well.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Well_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Well_main.iml" group="Well" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Well_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Well_test.iml" group="Well" />
     </modules>
   </component>
 </project>

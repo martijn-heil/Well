@@ -24,10 +24,12 @@
 
 package tk.martijn_heil.well.localization
 
+import java.util.*
+
 
 /**
  * Represents something which has a Locale
  */
 interface HasLocale {
-    fun getLocale()
+    fun getLocale(): Locale
 }

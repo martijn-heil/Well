@@ -25,74 +25,13 @@
 package tk.martijn_heil.well
 
 
-enum class Biome(id: Int) {
-    BEACHES(),
-    BIRCH_FOREST,
-    BIRCH_FOREST_HILLS,
-    COLD_BEACH,
-    DEEP_OCEAN,
-    DESERT(2),
-    DESERT_HILLS,
-    EXTREME_HILLS,
-    EXTREME_HILLS_WITH_TREES,
-    FOREST,
-    FOREST_HILLS,
-    FROZEN_OCEAN,
-    FROZEN_RIVER,
-    HELL,
-    ICE_FLATS,
-    ICE_MOUNTAINS,
-    JUNGLE,
-    JUNGLE_EDGE,
-    JUNGLE_HILLS,
-    MESA,
-    MESA_CLEAR_ROCK,
-    MESA_ROCK,
-    MUSHROOM_ISLAND,
-    MUSHROOM_ISLAND_SHORE,
-    MUTATED_BIRCH_FOREST,
-    MUTATED_BIRCH_FOREST_HILLS,
-    MUTATED_DESERT,
-    MUTATED_EXTREME_HILLS,
-    MUTATED_EXTREME_HILLS_WITH_TREES,
-    MUTATED_FOREST,
-    MUTATED_ICE_FLATS,
-    MUTATED_JUNGLE,
-    MUTATED_JUNGLE_EDGE,
-    MUTATED_MESA,
-    MUTATED_MESA_CLEAR_ROCK,
-    MUTATED_MESA_ROCK,
-    MUTATED_PLAINS,
-    MUTATED_REDWOOD_TAIGA,
-    MUTATED_REDWOOD_TAIGA_HILLS,
-    MUTATED_ROOFED_FOREST,
-    MUTATED_SAVANNA,
-    MUTATED_SAVANNA_ROCK,
-    MUTATED_SWAMPLAND,
-    MUTATED_TAIGA,
-    MUTATED_TAIGA_COLD,
-    OCEAN(0),
-    PLAINS(1),
-    REDWOOD_TAIGA,
-    REDWOOD_TAIGA_HILLS,
-    RIVER,
-    ROOFED_FOREST,
-    SAVANNA,
-    SAVANNA_ROCK,
-    SKY,
-    SMALLER_EXTREME_HILLS,
-    STONE_BEACH,
-    SWAMPLAND,
-    TAIGA,
-    TAIGA_COLD,
-    TAIGA_COLD_HILLS,
-    TAIGA_HILLS,
-    VOID;
+enum class Biome(val id: Int, val displayName: String, val temperature: Double, val isTemperatureAffectedByAltitude: Boolean = true) {
+    ICE_PLAINS(12, "ice plains", 0.0),
+    ICE_PLAINS_SPIKES(140, "ice plains spikes", 0.0),
+    COLD_TAIGA(30, "cold taiga", -0.5),
+    COLD_TAIGA_M(158, "cold taiga M", -0.5),
+    FROZEN_RIVER(11, "frozen river", 0.0),
+    COLD_BEACH(26, "cold beach", 0.05)
+    
 
-
-    val id: Int = id;
-    //val temperature: Double = temperature;
-
-
-    fun fromId(id: Int) = Biome.values().filter { it.id == id }.first();
 }
