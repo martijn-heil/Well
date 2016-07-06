@@ -22,9 +22,9 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.command
+package tk.martijn_heil.well.entity.living
 
 
-interface CommandCallable {
-    val description: CommandDescription
+interface Damageable {
+
 }

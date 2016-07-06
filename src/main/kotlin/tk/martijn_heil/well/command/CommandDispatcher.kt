@@ -25,7 +25,7 @@
 package tk.martijn_heil.well.command
 
 
-interface CommandDispatcher {
+interface CommandDispatcher : CommandCallable {
     val commands: List<CommandCallable>
 
     fun registerCommand(callable: CommandCallable)

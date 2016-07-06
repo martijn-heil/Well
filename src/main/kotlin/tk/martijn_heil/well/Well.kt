@@ -28,9 +28,16 @@ import tk.martijn_heil.well.event.Event
 import tk.martijn_heil.well.plugin.PluginManager
 import tk.martijn_heil.well.service.ServiceManager
 import java.io.File
+import java.util.logging.Logger
 
 class Well {
-    companion object : WellImplementation {
+    companion object : WellImpl {
+        override val logger: Logger
+            get() = implementation.logger
+
+        override val meta: WellImplMeta
+            get() = implementation.meta
+
         override val serviceManager: ServiceManager
             get() = implementation.serviceManager
 
@@ -51,8 +58,8 @@ class Well {
             get() = implementation.server
 
 
-        var implementation: WellImplementation
+        var implementation: WellImpl
             get() = implementation
-            set(value: WellImplementation) { implementation = value }
+            set(value: WellImpl) { implementation = value }
     }
 }

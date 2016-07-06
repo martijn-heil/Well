@@ -24,10 +24,10 @@
 
 package tk.martijn_heil.well.event.block
 
-import tk.martijn_heil.well.entity.living.Player
+import tk.martijn_heil.well.HasPlayer
 import tk.martijn_heil.well.event.CancellableEvent
 
 
-interface BlockBreakEvent : BlockEvent, CancellableEvent {
-    val player: Player;
+interface BlockBreakEvent : BlockEvent, CancellableEvent, HasPlayer {
+
 }

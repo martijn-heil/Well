@@ -22,9 +22,10 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.command
+package tk.martijn_heil.well.enchantments
 
 
-interface CommandCallable {
-    val description: CommandDescription
+interface  Enchantment {
+    val type: EnchantmentType
+    val level: Int
 }

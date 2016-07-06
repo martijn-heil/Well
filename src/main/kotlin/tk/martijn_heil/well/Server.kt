@@ -26,18 +26,15 @@ package tk.martijn_heil.well
 
 import tk.martijn_heil.well.entity.living.Player
 import java.util.*
-import java.util.logging.Logger
 
 
 /**
  * Represents a typical Minecraft server.
  */
 interface Server {
-
-    /**
-     * The primary logger of this server.
-     */
-    val logger: Logger
+    val serverType: ServerType
+    val nativeServerVersion: String?
+    val nativeServerName: String?
 
     /**
      * This server's MOTD (Message of the day).

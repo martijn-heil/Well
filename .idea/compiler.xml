@@ -26,8 +26,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Well" target="1.5" />
-      <module name="Well_main" target="1.8" />
-      <module name="Well_test" target="1.8" />
+      <module name="Well_main" target="1.7" />
+      <module name="Well_test" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

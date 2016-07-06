@@ -25,6 +25,6 @@
 package tk.martijn_heil.well.command
 
 
-class ArgumentParser(elements: List<CommandElement>) {
+interface  ArgumentParser {
 
 }

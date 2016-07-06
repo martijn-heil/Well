@@ -22,9 +22,11 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.command
+package tk.martijn_heil.well.entity.living
+
+import tk.martijn_heil.well.entity.Entity
 
 
-interface CommandCallable {
-    val description: CommandDescription
+interface LivingEntity : Entity, Damageable {
+
 }

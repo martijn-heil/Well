@@ -22,9 +22,15 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.command
+package tk.martijn_heil.well
 
 
-interface CommandCallable {
-    val description: CommandDescription
+enum class ServerType {
+    CRAFTBUKKIT(),
+    SPIGOT(),
+    PAPER_SPIGOT(),
+    SPONGE_FORGE(),
+    SPONGE_VANILLA(),
+
+    UNKNOWN(),
 }

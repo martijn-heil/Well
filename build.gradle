@@ -7,8 +7,8 @@ version = '1.0-SNAPSHOT'
 
 description = "Well"
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 //noinspection GroovyAssignabilityCheck
 configurations.all {

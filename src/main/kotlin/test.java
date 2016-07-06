@@ -25,6 +25,7 @@
 import org.jetbrains.annotations.NotNull;
 import tk.martijn_heil.well.GameProfile;
 import tk.martijn_heil.well.Identifiable;
+import tk.martijn_heil.well.plugin.Plugin;
 
 import java.util.UUID;
 
@@ -41,6 +42,7 @@ public class test implements GameProfile
     public boolean isKnown()
     {
         return false;
+        Plugin.State.
     }
 
 

@@ -24,13 +24,24 @@
 
 package tk.martijn_heil.well.entity.living
 
+import tk.martijn_heil.well.Location
 import tk.martijn_heil.well.OfflinePlayer
 import tk.martijn_heil.well.command.CommandSource
 import tk.martijn_heil.well.messaging.MessageRecipient
+import java.net.InetSocketAddress
 
 /**
  * Represents an online player.
  */
-interface Player : OfflinePlayer, MessageRecipient, CommandSource {
+interface Player : Humanoid, OfflinePlayer, MessageRecipient, CommandSource {
+    val adress: InetSocketAddress
 
+
+    var bedSpawnLocation: Location
+    var allowFlight: Boolean
+    var compassTarget: Location
+
+
+    fun canSee(other: Player): Boolean
+    fun doChat(message: String)
 }

@@ -22,9 +22,13 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.command
+package tk.martijn_heil.well.event.block
+
+import tk.martijn_heil.well.event.CancellableEvent
+import tk.martijn_heil.well.inventory.ItemStack
 
 
-interface CommandCallable {
-    val description: CommandDescription
+interface BlockDispenseEvent : BlockEvent, CancellableEvent {
+    var item: ItemStack
+    var velocity:
 }

@@ -22,9 +22,11 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.command
+package tk.martijn_heil.well.util.math
 
 
-interface CommandCallable {
-    val description: CommandDescription
+interface Vector : Cloneable {
+    fun add(vector: Vector): Vector
+    fun getAngle(other: Vector)
+    fun copyFrom(vector: Vector)
 }

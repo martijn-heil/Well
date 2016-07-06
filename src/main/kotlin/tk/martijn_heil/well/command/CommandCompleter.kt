@@ -25,6 +25,6 @@
 package tk.martijn_heil.well.command
 
 
-interface CommandCallable {
-    val description: CommandDescription
+interface CommandCompleter {
+
 }

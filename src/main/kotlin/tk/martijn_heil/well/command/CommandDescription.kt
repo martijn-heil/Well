@@ -24,7 +24,18 @@
 
 package tk.martijn_heil.well.command
 
+import java.util.*
 
-interface CommandCallable {
-    val description: CommandDescription
+
+interface CommandDescription {
+
+    fun getHelp(inLocale: Locale): String
+    fun getHelp(): String
+
+    fun getShortDescription(inLocale: Locale): String
+    fun getShortDescription(): String
+
+
+    fun getUsage(inLocale: Locale): String
+    fun getUsage(): String
 }

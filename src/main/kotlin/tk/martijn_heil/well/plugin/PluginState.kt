@@ -26,7 +26,12 @@ package tk.martijn_heil.well.plugin
 
 
 enum class PluginState {
+    LOADING(),
     LOADED(),
+
+    ENABLING(),
     ENABLED(),
+
+    DISABLING(),
     DISABLED()
 }

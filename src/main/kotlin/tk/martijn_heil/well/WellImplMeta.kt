@@ -25,9 +25,9 @@
 package tk.martijn_heil.well
 
 
-interface WellImplementationMeta {
-    val wellVersion: String
-    val version: String
-    val name: String
-    val description: String?
+interface WellImplMeta {
+    val wellVersion: String?
+    val implVersion: String?
+    val implName: String?
+    val implDescription: String?
 }
