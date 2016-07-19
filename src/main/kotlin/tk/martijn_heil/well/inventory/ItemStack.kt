@@ -24,7 +24,15 @@
 
 package tk.martijn_heil.well.inventory
 
+import tk.martijn_heil.well.enchantments.Enchantment
 
+
+/**
+ * This is guaranteed to be immutable!
+ */
 interface ItemStack : Cloneable {
+    var enchantments: Collection<Enchantment>
 
+    fun addEnchantment(enchantment: Collection<Enchantment>)
+    fun addEnchantments(enchantments: Collection<Enchantment>)
 }

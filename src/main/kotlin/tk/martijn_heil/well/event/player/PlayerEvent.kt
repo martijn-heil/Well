@@ -22,12 +22,11 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.block
+package tk.martijn_heil.well.event.player
 
-import tk.martijn_heil.well.Location
+import tk.martijn_heil.well.HasPlayer
 
 
-interface Block : Comparable<Block> {
-    val providedPower: Int
-    val location: Location
+interface PlayerEvent : HasPlayer {
+
 }

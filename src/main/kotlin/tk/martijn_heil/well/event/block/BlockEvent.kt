@@ -24,7 +24,7 @@
 
 package tk.martijn_heil.well.event.block
 
-import tk.martijn_heil.well.block.Block
+import tk.martijn_heil.well.world.block.Block
 
 
 interface BlockEvent {

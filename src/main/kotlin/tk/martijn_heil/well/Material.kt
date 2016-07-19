@@ -22,11 +22,9 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.util.math
+package tk.martijn_heil.well
 
 
-interface Vector : Cloneable {
-    fun add(vector: Vector): Vector
-    fun getAngle(other: Vector)
-    fun copyFrom(vector: Vector)
+enum class Material {
+
 }

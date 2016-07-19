@@ -25,7 +25,7 @@
 package tk.martijn_heil.well.enchantments
 
 
-enum class EnchantmentType(val id: Int, val maxLevel: Int, val minLevel: Int) {
+enum class EnchantmentType(val id: Int, val maxLevel: Int, val minLevel: Int) {}
     /**
      * Provides extra damage when shooting arrows from bows
      */

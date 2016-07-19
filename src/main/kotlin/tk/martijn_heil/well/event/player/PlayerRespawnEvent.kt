@@ -22,9 +22,9 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.util.math
+package tk.martijn_heil.well.event.player
 
 
-class SimpleVector {
+interface PlayerRespawnEvent : PlayerEvent {
 
 }

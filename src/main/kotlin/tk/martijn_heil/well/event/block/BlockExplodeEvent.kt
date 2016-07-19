@@ -24,12 +24,19 @@
 
 package tk.martijn_heil.well.event.block
 
-import org.apache.commons.math3.geometry.euclidean.threed.Vector3D
+import tk.martijn_heil.well.world.block.Block
 import tk.martijn_heil.well.event.CancellableEvent
-import tk.martijn_heil.well.inventory.ItemStack
 
 
-interface BlockDispenseEvent : BlockEvent, CancellableEvent {
-    var item: ItemStack
-    var velocity: Vector3D
+interface BlockExplodeEvent : BlockEvent, CancellableEvent {
+
+    /**
+     * Mutable list of blocks that will be removed by the explosion
+     */
+    var blocksList: List<Block>
+
+    /**
+     * Percentage of blocks to drop for this explosion.
+     */
+    var dropPercentage: Float
 }

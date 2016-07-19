@@ -22,14 +22,10 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.event.block
+package tk.martijn_heil.well.world
 
-import org.apache.commons.math3.geometry.euclidean.threed.Vector3D
-import tk.martijn_heil.well.event.CancellableEvent
-import tk.martijn_heil.well.inventory.ItemStack
-
-
-interface BlockDispenseEvent : BlockEvent, CancellableEvent {
-    var item: ItemStack
-    var velocity: Vector3D
+/**
+ * Represents a world.
+ */
+interface World {
 }

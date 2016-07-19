@@ -24,7 +24,12 @@
 
 package tk.martijn_heil.well.event.block
 
+import tk.martijn_heil.well.HasPlayer
+import tk.martijn_heil.well.event.CancellableEvent
+import tk.martijn_heil.well.inventory.ItemStack
 
-interface BlockDamageEvent {
 
+interface BlockDamageEvent : BlockEvent, CancellableEvent, HasPlayer {
+    var doInstantBreak: Boolean
+    val itemInHand: ItemStack
 }

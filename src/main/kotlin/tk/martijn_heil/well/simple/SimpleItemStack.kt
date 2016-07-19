@@ -22,10 +22,11 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well
+package tk.martijn_heil.well.simple
 
-/**
- * Represents a world.
- */
-interface World {
+import tk.martijn_heil.well.inventory.ItemStack
+
+
+class SimpleItemStack : ItemStack {
+
 }
