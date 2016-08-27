@@ -26,6 +26,32 @@ package tk.martijn_heil.well.enchantments
 
 
 enum class EnchantmentType(val id: Int, val maxLevel: Int, val minLevel: Int) {}
+
+    /**
+     * Provides protection against environmental damage
+     */
+    PROTECTION_ENVIRONMENTAL(),
+
+    /**
+     * Provides protection against fall damage
+     */
+    PROTECTION_FALL(),
+
+    /**
+     * Provides protection against fire damage
+     */
+    PROTECTION_FIRE(),
+
+    /**
+     * Provides protection against projectile damage
+     */
+    PROTECTION_PROJECTILE(),
+
+    /**
+     * Provides protection against explosive damage
+     */
+    PROTECTION_EXPLOSIONS(),
+
     /**
      * Provides extra damage when shooting arrows from bows
      */
@@ -121,30 +147,7 @@ enum class EnchantmentType(val id: Int, val maxLevel: Int, val minLevel: Int) {}
      */
     OXYGEN(),
 
-    /**
-     * Provides protection against environmental damage
-     */
-    PROTECTION_ENVIRONMENTAL(),
 
-    /**
-     * Provides protection against explosive damage
-     */
-    PROTECTION_EXPLOSIONS(),
-
-    /**
-     * Provides protection against fall damage
-     */
-    PROTECTION_FALL(),
-
-    /**
-     * Provides protection against fire damage
-     */
-    PROTECTION_FIRE(),
-
-    /**
-     * Provides protection against projectile damage
-     */
-    PROTECTION_PROJECTILE(),
 
     /**
      * Allows blocks to drop themselves instead of fragments (for example, stone instead of cobblestone)

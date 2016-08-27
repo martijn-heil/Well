@@ -24,7 +24,26 @@
 
 package tk.martijn_heil.well.entity
 
+import tk.martijn_heil.well.HasLocation
+import tk.martijn_heil.well.HasVelocity
+import tk.martijn_heil.well.Identifiable
+import tk.martijn_heil.well.Ticks
 
-interface Entity {
 
+interface Entity : HasLocation, Identifiable, HasVelocity {
+    val entityId: Int
+    val isValid: Boolean
+    var customName: String
+    var customNameVisible: Boolean
+    var fallDistance: Float
+    var passenger: Entity
+    var isGlowing: Boolean
+    var isAffectedByGravity: Boolean
+    var isInvulnerable: Boolean
+    var isSilent: Boolean
+    var age: Ticks
+
+    fun ejectPassenger()
+    fun leaveVehicle()
+    fun remove()
 }

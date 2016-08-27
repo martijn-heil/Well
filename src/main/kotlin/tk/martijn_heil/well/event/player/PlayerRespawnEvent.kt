@@ -24,7 +24,10 @@
 
 package tk.martijn_heil.well.event.player
 
+import tk.martijn_heil.well.Location
+
 
 interface PlayerRespawnEvent : PlayerEvent {
-
+    var where: Location
+    val isBedSpawn: Boolean
 }
