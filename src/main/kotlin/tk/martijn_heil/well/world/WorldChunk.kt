@@ -28,5 +28,8 @@ package tk.martijn_heil.well.world
  * A chunk of blocks in a world.
  */
 interface WorldChunk {
+    var isLoaded: Boolean
 
+    val x: Int
+    val z: Int
 }
