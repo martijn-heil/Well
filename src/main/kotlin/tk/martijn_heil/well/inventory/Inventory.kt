@@ -24,6 +24,12 @@
 
 package tk.martijn_heil.well.inventory
 
+import tk.martijn_heil.well.Material
+
 
 interface Inventory {
+    val holder: InventoryHolder
+
+    fun findAll(itemstack: ItemStack): Map<Int, ItemStack>
+    fun findAll(material: Material): Map<Int, ItemStack>
 }

@@ -22,18 +22,11 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.simple
+package tk.martijn_heil.well.inventory
 
-import tk.martijn_heil.well.enchantments.Enchantment
-import tk.martijn_heil.well.inventory.ItemStack
+import tk.martijn_heil.well.Locatable
 
 
-class SimpleItemStack(override var enchantments: Collection<Enchantment>) : ItemStack {
-    override fun addEnchantments(enchantments: Collection<Enchantment>) {
-        throw UnsupportedOperationException()
-    }
+interface InventoryHolder : Locatable {
 
-    override fun addEnchantment(enchantment: Collection<Enchantment>) {
-        throw UnsupportedOperationException()
-    }
 }

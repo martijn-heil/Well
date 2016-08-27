@@ -24,10 +24,9 @@
 
 package tk.martijn_heil.well.world.block
 
-import tk.martijn_heil.well.Location
+import tk.martijn_heil.well.Locatable
 
 
-interface Block : Comparable<Block> {
+interface Block : Comparable<Block>, Locatable {
     val providedPower: Int
-    val location: Location
 }

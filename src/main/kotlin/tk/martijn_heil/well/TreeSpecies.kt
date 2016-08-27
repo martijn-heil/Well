@@ -22,18 +22,14 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.simple
-
-import tk.martijn_heil.well.enchantments.Enchantment
-import tk.martijn_heil.well.inventory.ItemStack
+package tk.martijn_heil.well
 
 
-class SimpleItemStack(override var enchantments: Collection<Enchantment>) : ItemStack {
-    override fun addEnchantments(enchantments: Collection<Enchantment>) {
-        throw UnsupportedOperationException()
-    }
-
-    override fun addEnchantment(enchantment: Collection<Enchantment>) {
-        throw UnsupportedOperationException()
-    }
+enum class TreeSpecies {
+    ACACIA,
+    BIRCH,
+    DARK_OAK,
+    OAK,
+    JUNGLE,
+    REDWOOD
 }

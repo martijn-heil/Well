@@ -22,18 +22,11 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.simple
+package tk.martijn_heil.well.entity.vehicle
 
-import tk.martijn_heil.well.enchantments.Enchantment
-import tk.martijn_heil.well.inventory.ItemStack
+import org.apache.commons.math3.geometry.euclidean.threed.Vector3D
 
 
-class SimpleItemStack(override var enchantments: Collection<Enchantment>) : ItemStack {
-    override fun addEnchantments(enchantments: Collection<Enchantment>) {
-        throw UnsupportedOperationException()
-    }
-
-    override fun addEnchantment(enchantment: Collection<Enchantment>) {
-        throw UnsupportedOperationException()
-    }
+interface Minecart : Vehicle {
+    var derailedVelocityMod: Vector3D
 }

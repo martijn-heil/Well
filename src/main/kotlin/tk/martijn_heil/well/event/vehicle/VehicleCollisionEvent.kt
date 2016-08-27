@@ -22,18 +22,9 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.simple
-
-import tk.martijn_heil.well.enchantments.Enchantment
-import tk.martijn_heil.well.inventory.ItemStack
+package tk.martijn_heil.well.event.vehicle
 
 
-class SimpleItemStack(override var enchantments: Collection<Enchantment>) : ItemStack {
-    override fun addEnchantments(enchantments: Collection<Enchantment>) {
-        throw UnsupportedOperationException()
-    }
+interface VehicleCollisionEvent {
 
-    override fun addEnchantment(enchantment: Collection<Enchantment>) {
-        throw UnsupportedOperationException()
-    }
 }

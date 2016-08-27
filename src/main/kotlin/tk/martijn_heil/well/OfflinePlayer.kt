@@ -29,7 +29,7 @@ import tk.martijn_heil.well.inventory.HasInventory
 /**
  * Represents a player who has played before on the server, but might not currently be online.
  */
-interface OfflinePlayer : GameProfile, HasPlayer, HasInventory, HasLocation {
+interface OfflinePlayer : GameProfile, HasPlayer, HasInventory, Locatable {
     /**
      * Date of first log-in for this player, or 0
      */

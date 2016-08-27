@@ -24,13 +24,13 @@
 
 package tk.martijn_heil.well.entity
 
-import tk.martijn_heil.well.HasLocation
+import tk.martijn_heil.well.Locatable
 import tk.martijn_heil.well.HasVelocity
 import tk.martijn_heil.well.Identifiable
 import tk.martijn_heil.well.Ticks
 
 
-interface Entity : HasLocation, Identifiable, HasVelocity {
+interface Entity : Locatable, Identifiable, HasVelocity {
     val entityId: Int
     val isValid: Boolean
     var customName: String

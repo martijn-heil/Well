@@ -24,16 +24,9 @@
 
 package tk.martijn_heil.well.simple
 
-import tk.martijn_heil.well.enchantments.Enchantment
-import tk.martijn_heil.well.inventory.ItemStack
+import tk.martijn_heil.well.Location
 
 
-class SimpleItemStack(override var enchantments: Collection<Enchantment>) : ItemStack {
-    override fun addEnchantments(enchantments: Collection<Enchantment>) {
-        throw UnsupportedOperationException()
-    }
+class SimpleLocation(override val x: Int, override val y: Int, override val z: Int) : Location {
 
-    override fun addEnchantment(enchantment: Collection<Enchantment>) {
-        throw UnsupportedOperationException()
-    }
 }

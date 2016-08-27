@@ -25,6 +25,6 @@
 package tk.martijn_heil.well
 
 
-interface HasLocation {
+interface Locatable {
     var location: Location
 }
