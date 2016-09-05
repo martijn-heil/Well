@@ -24,7 +24,9 @@
 
 package tk.martijn_heil.well.event.vehicle
 
+import tk.martijn_heil.well.entity.vehicle.Vehicle
 
-interface VehicleCollisionEvent : VehicleEvent {
 
+interface VehicleEvent {
+    val vehicle: Vehicle
 }

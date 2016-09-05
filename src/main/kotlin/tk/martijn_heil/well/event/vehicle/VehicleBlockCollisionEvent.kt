@@ -24,7 +24,9 @@
 
 package tk.martijn_heil.well.event.vehicle
 
+import tk.martijn_heil.well.world.block.Block
 
-interface VehicleCollisionEvent : VehicleEvent {
 
+interface VehicleBlockCollisionEvent : VehicleCollisionEvent {
+    val block: Block
 }

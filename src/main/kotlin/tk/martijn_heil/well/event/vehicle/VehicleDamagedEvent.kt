@@ -25,6 +25,6 @@
 package tk.martijn_heil.well.event.vehicle
 
 
-interface VehicleCollisionEvent : VehicleEvent {
+interface VehicleDamagedEvent : VehicleEvent {
 
 }
