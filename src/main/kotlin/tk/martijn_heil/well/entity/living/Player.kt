@@ -26,22 +26,34 @@ package tk.martijn_heil.well.entity.living
 
 import tk.martijn_heil.well.Location
 import tk.martijn_heil.well.OfflinePlayer
-import tk.martijn_heil.well.command.CommandSource
+import tk.martijn_heil.well.localization.HasLocale
 import tk.martijn_heil.well.messaging.MessageRecipient
 import java.net.InetSocketAddress
 
 /**
  * Represents an online player.
  */
-interface Player : Humanoid, OfflinePlayer, MessageRecipient, CommandSource {
+interface Player : Humanoid, OfflinePlayer, MessageRecipient, HasLocale {
     val adress: InetSocketAddress
 
 
     var bedSpawnLocation: Location
     var allowFlight: Boolean
+    var flySpeed: Float
+    var walkSpeed: Float
     var compassTarget: Location
-
+    var isSneaking: Boolean
+    var isSprinting: Boolean
 
     fun canSee(other: Player): Boolean
     fun doChat(message: String)
+
+    fun hidePlayer(other: Player)
+    fun showPlayer(other: Player)
+
+    fun hideFrom(other: Player)
+    fun showFor(other: Player)
+
+    fun updateInventory()
+    fun requestResourcePack(url: String)
 }

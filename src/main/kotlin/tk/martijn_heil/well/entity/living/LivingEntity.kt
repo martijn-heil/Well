@@ -24,9 +24,20 @@
 
 package tk.martijn_heil.well.entity.living
 
+import tk.martijn_heil.well.Ticks
 import tk.martijn_heil.well.entity.Entity
 
 
 interface LivingEntity : Entity, Damageable {
+    var isGliding: Boolean
+    var isCollidable: Boolean
+    var isLeashed: Boolean
+    var hasAI: Boolean
+    var canPickUpItems: Boolean
+    var maximumAir: Ticks
+    var remainingAir: Ticks
+    var despawnWhenFarAway: Boolean
+    val eyeHeigth: Double
 
+    fun hasLineOfSightTo(other: Entity): Boolean
 }

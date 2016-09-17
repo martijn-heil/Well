@@ -26,5 +26,8 @@ package tk.martijn_heil.well.entity.living
 
 
 interface Damageable {
+    var maxHealth: Double
+    var health: Double
 
+    fun resetMaxHealth()
 }

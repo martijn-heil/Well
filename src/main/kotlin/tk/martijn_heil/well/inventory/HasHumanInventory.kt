@@ -22,22 +22,9 @@
  * SOFTWARE.
  */
 
-package tk.martijn_heil.well.entity.living
-
-import tk.martijn_heil.well.GameMode
-import tk.martijn_heil.well.Ticks
-import tk.martijn_heil.well.inventory.HasHumanInventory
-import tk.martijn_heil.well.inventory.Inventory
+package tk.martijn_heil.well.inventory
 
 
-interface Humanoid : LivingEntity, HasHumanInventory {
-    var gamemode: GameMode
-    val enderchest: Inventory
-    val sleep: Ticks
-    val isSleeping: Boolean
-    val isBlocking: Boolean
-    val isHandRaised: Boolean
-    val requiredExpToLevel: Int
-
-    fun closeInventory()
+interface HasHumanInventory {
+    val inventory: HumanInventory
 }
