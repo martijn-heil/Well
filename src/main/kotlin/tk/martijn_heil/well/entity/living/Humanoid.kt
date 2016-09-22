@@ -38,6 +38,7 @@ interface Humanoid : LivingEntity, HasHumanInventory {
     val isBlocking: Boolean
     val isHandRaised: Boolean
     val requiredExpToLevel: Int
+    val name: String
 
     fun closeInventory()
 }
