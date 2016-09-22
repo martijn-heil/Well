@@ -25,149 +25,42 @@
 package tk.martijn_heil.well.enchantments
 
 
-enum class EnchantmentType(val id: Int, val maxLevel: Int, val minLevel: Int) {}
+enum class EnchantmentType(val id: Int, val maxLevel: Int) {
 
-    /**
-     * Provides protection against environmental damage
-     */
-    PROTECTION_ENVIRONMENTAL(),
-
-    /**
-     * Provides protection against fall damage
-     */
-    PROTECTION_FALL(),
-
-    /**
-     * Provides protection against fire damage
-     */
-    PROTECTION_FIRE(),
-
-    /**
-     * Provides protection against projectile damage
-     */
-    PROTECTION_PROJECTILE(),
-
-    /**
-     * Provides protection against explosive damage
-     */
-    PROTECTION_EXPLOSIONS(),
-
-    /**
-     * Provides extra damage when shooting arrows from bows
-     */
-    ARROW_DAMAGE(),
-
-    /**
-     * Sets entities on fire when hit by arrows shot from a bow
-     */
-    ARROW_FIRE(),
-
-    /**
-     * Provides infinite arrows when shooting a bow
-     */
-    ARROW_INFINITE(),
-
-    /**
-     * Provides a knockback when an entity is hit by an arrow from a bow
-     */
-    ARROW_KNOCKBACK(),
-
-    /**
-     * Increases damage against all targets
-     */
-    DAMAGE_ALL(),
-
-    /**
-     * Increases damage against arthropod targets
-     */
-    DAMAGE_ARTHROPODS(),
-
-    /**
-     * Increases damage against undead targets
-     */
-    DAMAGE_UNDEAD(),
-
-    /**
-     * Increases walking speed while in water
-     */
-    DEPTH_STRIDER(),
-
-    /**
-     * Increases the rate at which you mine/dig
-     */
-    DIG_SPEED(),
-
-    /**
-     * Decreases the rate at which a tool looses durability
-     */
-    DURABILITY(),
-
-    /**
-     * When attacking a target, has a chance to set them on fire
-     */
-    FIRE_ASPECT(),
-
-    /**
-     * Freezes any still water adjacent to ice / frost which player is walking on
-     */
-    FROST_WALKER(),
-
-    /**
-     * All damage to other targets will knock them back when hit
-     */
-    KNOCKBACK(),
-
-    /**
-     * Provides a chance of gaining extra loot when destroying blocks
-     */
-    LOOT_BONUS_BLOCKS(),
-
-    /**
-     * Provides a chance of gaining extra loot when killing monsters
-     */
-    LOOT_BONUS_MOBS(),
-
-    /**
-     * Decreases odds of catching worthless junk
-     */
-    LUCK(),
-
-    /**
-     * Increases rate of fish biting your hook
-     */
-    LURE(),
-
-    /**
-     * Allows mending the item using experience orbs
-     */
-    MENDING(),
-
-    /**
-     * Decreases the rate of air loss whilst underwater
-     */
-    OXYGEN(),
+    PROTECTION_ENVIRONMENT(0, 4),
+    PROTECTION_FIRE(1, 4),
+    PROTECTION_FALLING(2, 4),
+    PROTECTION_EXPLOSION(3, 4),
+    PROTECTION_PROJECTILE(4, 4),
+    RESPIRATION(5, 3),
+    AQUA_AFFINITY(6, 1),
+    THORNS(7, 3),
+    DEPTH_STRIDER(8, 3),
+    FROST_WALKER(9, 2),
+    SHARPNESS(16, 5),
+    SMITE(17, 5),
+    BANE_OF_ARTHROPODS(18, 5),
+    KNOCKBACK(19, 2),
+    FIRE_ASPECT(20, 2),
+    LOOTING(21, 3),
+    EFFICIENCY(32, 5),
+    SILK_TOUCH(33, 1),
+    UNBREAKING(34, 3),
+    FORTUNE(35, 3),
+    POWER(48, 5),
+    PUNCH(49, 2),
+    FLAME(50, 1),
+    INFINITY(51, 1),
+    LUCK_OF_THE_SEA(61, 3),
+    LURE(62, 3),
+    MENDING(70, 1);
 
 
 
-    /**
-     * Allows blocks to drop themselves instead of fragments (for example, stone instead of cobblestone)
-     */
-    SILK_TOUCH(),
 
-    /**
-     * Damages the attacker
-     */
-    THORNS(),
-
-    /**
-     * Increases the speed at which a player mines underwater
-     */
-    WATER_WORKER(),
-
-
-    fun conflictsWith(other: Enchantment): Boolean {
-
-    }
+//    fun conflictsWith(other: Enchantment): Boolean {
+//
+//    }
 
 
     fun fromId(id: Int): EnchantmentType? {
