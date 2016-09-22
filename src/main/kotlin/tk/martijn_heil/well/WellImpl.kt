@@ -42,11 +42,12 @@ interface WellImpl {
     val logger: Logger
 
     val server: Server
-    val pluginManagers: Collection<PluginManager>
+    //val pluginManagers: Collection<PluginManager>
+    val pluginManager: PluginManager
     val wellRootDirectory: File
     val serviceManager: ServiceManager
 
 
-    fun registerPluginManager(manager: PluginManager)
+    //fun registerPluginManager(manager: PluginManager)
     fun callEvent(event: Event)
 }

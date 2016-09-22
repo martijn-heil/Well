@@ -32,6 +32,9 @@ import java.util.logging.Logger
 
 class Well {
     companion object : WellImpl {
+        override val pluginManager: PluginManager
+            get() = implementation.pluginManager
+
         override val logger: Logger
             get() = implementation.logger
 
@@ -43,15 +46,9 @@ class Well {
 
         override fun callEvent(event: Event) = implementation.callEvent(event)
 
-        override fun registerPluginManager(manager: PluginManager) = implementation.registerPluginManager(manager)
-
 
         override val wellRootDirectory: File
             get() = implementation.wellRootDirectory
-
-
-        override val pluginManagers: Collection<PluginManager>
-            get() = implementation.pluginManagers
 
 
         override val server: Server
