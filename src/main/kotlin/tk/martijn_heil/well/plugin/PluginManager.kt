@@ -38,9 +38,9 @@ interface PluginManager {
     fun reloadAll()
     fun unloadAll()
 
-    fun enable(plugin: Plugin)
-    fun disable(plugin: Plugin)
-    fun reload(plugin: Plugin)
+    fun enablePlugin(plugin: Plugin)
+    fun disablePlugin(plugin: Plugin)
+    fun reloadPlugin(plugin: Plugin)
 
     fun load(name: String)
     fun unload(plugin: Plugin)
